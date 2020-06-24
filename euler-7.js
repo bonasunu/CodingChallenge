@@ -31,5 +31,4 @@ const nthPrime = n => {
     console.log(primeNum)
 }
 
-nthPrime(100)
 nthPrime(10001)
