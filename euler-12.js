@@ -8,13 +8,41 @@ const triangularNumber = n => {
     return num;
 }
 
-const divisbleTriangleNumber = n => {
-    let result = 0
+const factors = n => {
+    let numFactors = [];
 
-    while (result === 0) {
-        // call triangularNumber
-        // if divisible n, result change, loop stop
+    for (let i = 1; i <= Math.floor(Math.sqrt(n)); i++) {
+        if (n % i === 0) {
+            numFactors.push(i);
+
+            if (n / i !== i) {
+                numFactors.push(n / i);
+            }
+        }
     }
-    console.log(result)
+
+    return numFactors.length - 1;
 }
 
+const divisibleTriangleNumber = n => {
+    let result = 0;
+    let num = 1;
+    
+    while (result === 0) {
+        const factorsNum = factors(triangularNumber(num));
+
+        if (factorsNum === n) {
+            result = triangularNumber(num)
+        }
+
+        num++;
+    }
+    console.log(result)
+    return result;
+}
+
+//divisibleTriangleNumber(500) // should return 28
+//divisibleTriangleNumber(23) // should return 630
+divisibleTriangleNumber(374)
+//divisibleTriangleNumber(500) // should return 76576500
+//divisibleTriangleNumber(374) // should return 17907120
