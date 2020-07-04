@@ -44,6 +44,7 @@ const divisibleTriangleNumber = n => {
 divisibleTriangleNumber(5) // should return 28
 divisibleTriangleNumber(23) // should return 630
 divisibleTriangleNumber(167) // should return 1385280
+//divisibleTriangleNumber(200)
 //divisibleTriangleNumber(500) // should return 76576500
 //divisibleTriangleNumber(374) // should return 17907120
 // TODO Fix for big O 
