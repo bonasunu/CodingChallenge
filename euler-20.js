@@ -6,15 +6,18 @@ const sumFactorialDigits = n => {
         factorialDigits *= i;
     }
 
-    factorialDigits = BigInt(factorialDigits).toString();
+    factorialDigits = BigInt(parseFloat(factorialDigits)).toString();
 
     for (let i = 0; i < factorialDigits.length; i++) {
         total += Number(factorialDigits[i]);
     }
 
 
-    //console.log(factorialDigits)
+    console.log(factorialDigits)
     console.log(total);
 }
 
 sumFactorialDigits(10) // should return 27
+sumFactorialDigits(25)
+sumFactorialDigits(75)
+sumFactorialDigits(100)
