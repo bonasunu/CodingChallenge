@@ -6,6 +6,7 @@ const powerDigitSum = exp => {
         sum += parseFloat(result[i])
     }
     
+    console.log(result)
     console.log(sum)
 }
 
